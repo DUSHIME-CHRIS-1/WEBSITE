@@ -13,7 +13,7 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* Light Theme */
+       
         .light {
             background-color: #f5f7fa;
             color: #1f2937;
@@ -27,7 +27,7 @@
             color: white;
         }
 
-        /* Dark Theme */
+       
         .dark {
             background-color: #111827;
             color: #e5e7eb;
@@ -43,58 +43,18 @@
     </style>
 </head>
 <body class="transition-colors duration-500 flex items-center justify-center min-h-screen p-6 md:p-12">
-    <!-- Main content card -->
+    
     <div class="card w-full max-w-lg mx-auto p-8 md:p-12 text-center rounded-3xl transition-colors duration-500">
         <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
             A Simple Webpage
         </h1>
         <p class="text-lg md:text-xl mb-8 leading-relaxed">
-            This is a clean and simple website with no images. It is fully responsive and features a theme toggle.
+            This is a clean and simple website with  images. It is fully responsive .
         </p>
 
-        <!-- Interactive button -->
-        <button id="themeToggle" class="cta-button font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
-            Toggle Theme
-        </button>
+        
     </div>
-
-    <!-- JavaScript for interactivity -->
-    <script>
-        const themeToggleButton = document.getElementById('themeToggle');
-        const htmlElement = document.documentElement;
-
-        // Function to toggle between 'light' and 'dark' themes
-        function toggleTheme() {
-            if (htmlElement.classList.contains('light')) {
-                htmlElement.classList.remove('light');
-                htmlElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                htmlElement.classList.remove('dark');
-                htmlElement.classList.add('light');
-                localStorage.setItem('theme', 'light');
-            }
-        }
-
-        // Set initial theme based on user's preference or system setting
-        function setInitialTheme() {
-            const storedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-            if (storedTheme === 'dark' || (storedTheme === null && prefersDark)) {
-                htmlElement.classList.add('dark');
-                htmlElement.classList.remove('light');
-            } else {
-                htmlElement.classList.add('light');
-                htmlElement.classList.remove('dark');
-            }
-        }
-
-        // Add event listener to the button
-        themeToggleButton.addEventListener('click', toggleTheme);
-
-        // Call the function to set the theme on page load
-        setInitialTheme();
-    </script>
+   <img src="https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg">
+   
 </body>
 </html>
